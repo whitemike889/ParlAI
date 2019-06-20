@@ -418,7 +418,7 @@ def _load_opt_file(optfile):
         # oops it's pickled
         with open(optfile, 'rb') as handle:
             opt = pickle.load(handle)
-    return Opt(opt)
+    return opt
 
 
 def load_agent_module(opt):

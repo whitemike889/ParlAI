@@ -672,7 +672,7 @@ class ParlaiParser(argparse.ArgumentParser):
         """
         self.add_extra_args(args)
         self.args = super().parse_args(args=args)
-        self.opt = Opt(vars(self.args))
+        self.opt = vars(self.args)
 
         # custom post-parsing
         self.opt['parlai_home'] = self.parlai_home
